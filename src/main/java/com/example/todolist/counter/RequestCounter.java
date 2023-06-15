@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.counter;
 
 import org.springframework.stereotype.Component;
 

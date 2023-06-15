@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.handler.exception;
 
 public class NotFoundException extends Exception {
     public NotFoundException(Long id){

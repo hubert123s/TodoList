@@ -1,4 +1,7 @@
-package com.example.todolist;
+package com.example.todolist.controller;
+import com.example.todolist.handler.exception.NotFoundException;
+import com.example.todolist.model.TodoList;
+import com.example.todolist.service.TodoListService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +17,8 @@ public class TodoListController {
         return todoListService.findAll();
     }
     @PostMapping
-    void add(@RequestBody TodoList todoList){
-        todoListService.add(todoList);
+    TodoList add(@RequestBody TodoList todoList){
+       return todoListService.add(todoList);
     }
     @DeleteMapping("/{id}")
     void remove(@PathVariable Long id) throws NotFoundException {
