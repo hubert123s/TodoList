@@ -1,15 +1,15 @@
 package com.example.todolist.counter;
 
-import com.example.todolist.counter.RequestCounter;
 import jakarta.servlet.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 @Component
+@RequiredArgsConstructor
 public class RequestCountFilter implements Filter {
-    private RequestCounter requestCounter;
+    private final RequestCounter requestCounter;
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
